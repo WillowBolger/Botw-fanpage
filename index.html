@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif;
+    }
+    body,
+    html {
+      height: 100%;
+      color: #777;
+      line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3,
+    .bgimg-4{
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url("https://i.pinimg.com/originals/27/b7/e1/27b7e1258e4662a226bbd3549e785bf5.jpg");
+      min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+      background-image: url("https://i.pinimg.com/originals/24/39/90/2439901a8698f306c312465dc652f7bc.jpg");
+      min-height: 400px;
+    }
+
+    /* Third image (Reviews) */
+    .bgimg-3 {
+      background-image: url("https://www.tn2magazine.ie/wp-content/uploads/2017/03/zelda-1.jpg");
+      min-height: 400px;
+    }
+
+    /* Forth image (Contact) */
+    .bgimg-4 {
+      background-image: url("https://cnet2.cbsistatic.com/img/n2e6KEkv6dXc8MJHOLaGFFvEw1w=/940x528/2017/01/13/0e1277d0-740c-486e-b9af-eace4cca543a/ns210.jpg");
+      min-height: 400px;
+    }
+
+    .w3-wide {
+      letter-spacing: 10px;
+    }
+    .w3-hover-opacity {
+      cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3,
+      .bgimg-4{
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+  </style>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a
+          class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0);"
+          onclick="toggleFunction()"
+          title="Toggle Navigation Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-user"></i> ABOUT</a
+        >
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-th"></i> IMAGES</a
+        >
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-envelope"></i> CONTACT</a
+        >
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"
+        >
+          <a href="https://botw-fanpage-links.glitch.me/" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-link"></i> LINKS</a
+        >
+          <i class="fa fa-search"></i>
+        </a>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a
+          href="#about"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >ABOUT</a
+        >
+        <a
+          href="#portfolio"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >PORTFOLIO</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >CONTACT</a
+        >
+        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+      </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <span
+          class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"
+          >THE <span class="w3-hide-small">LEGEND OF</span> ZELDA</span
+        >
+      </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+      <h3 class="w3-center">ABOUT THE GAME</h3>
+      <p class="w3-center">
+        <em>I <b>love</b> The Legend of Zelda</em>
+      </p>
+      <p>
+        The Legend of Zelda: Breath of the Wild is an open world,
+        action-adventure game developed and published by Nintendo in 2017 for
+        the Nintendo Switch consoles. In this game, the player controls Link,
+        who awakens from a hundred-year slumber to defeat Calamity Ganon and
+        save the great kingdom of Hyrule. The world packed with endless
+        opportunities, possibilities, and exploration. This game is very dear to
+        me. Without a doubt, it is one of the greatest games I have ever played
+        and ever will play.
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <p>
+            <b
+              ><i class="fa fa-user w3-margin-right"></i>Why Breath of the
+              Wild?</b
+            >
+          </p>
+          <br />
+          <img
+            src="https://i.guim.co.uk/img/media/67edb515d6a2b19ef10b002c6bdd44b40b284316/112_0_1734_1041/master/1734.jpg?width=1200&quality=85&auto=format&fit=max&s=4c6c02528f857ee541c6d0fb92cf2b64"
+            class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+            alt="Landscape"
+            width="500"
+            height="333"
+          />
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/sb9K7SqIQqkZu32oRru70_jtjCw=/0x0:1516x852/1200x675/filters:focal(637x305:879x547)/cdn.vox-cdn.com/uploads/chorus_image/image/68680986/Screen_Shot_2017_05_02_at_12.25.59_PM.0.png"
+            class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+            alt="Zelda"
+            width="500"
+            height="333"
+          />
+          <img
+            src="https://i.pinimg.com/originals/d5/0a/9d/d50a9dc3f6ad5fcb76d39af74558d863.gif"
+            class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+            alt="Cutscene"
+            width="500"
+            height="333"
+          />
+        </div>
+
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+          <p>
+            There is no doubt that the art in this game is just as breathtaking
+            as the previous installments. The art in The Legend of Zelda: Breath
+            of the Wild is by far my favorite amongst the franchise. Whomever
+            you ask may also share this view, with many players still in awe
+            from the beautiful scenery three and a half years after its initial
+            release. This fact did not go unnoticed either, as the game has won
+            countless rewards for its beauty and detail, but all this detail did
+            not take a day to create. The creators of the game struggled for a
+            long time to achieve the perfect style for their game. There were
+            many drafts and concepts thrown away when they were decided not to
+            be the right choice for the game. We can imagine the endless amount
+            of hours the artists put into this project. A lot of this work has
+            unfortunately never been able to see the light of day, but thanks to
+            the determination of the creators, we have a beautiful final
+            product. The concepts for Zelda alone filled more than three pages,
+            and although they were never used, it's amazing to be able to look
+            back on the possibilities and directions my favorite game could have
+            taken.
+          </p>
+        </div>
+      </div>
+      <p class="w3-large w3-center w3-padding-16">
+        What creates the perfect atmosphere:
+      </p>
+      <p class="w3-wide"><i class="fa fa-music"></i>Music</p>
+      <div class="w3-light-grey">
+        <div
+          class="w3-container w3-padding-small w3-dark-grey w3-center"
+          style="width:100%"
+        >
+          100%
+        </div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-book"></i>Story</p>
+      <div class="w3-light-grey">
+        <div
+          class="w3-container w3-padding-small w3-dark-grey w3-center"
+          style="width:100%"
+        >
+          100%
+        </div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo"></i>Art</p>
+      <div class="w3-light-grey">
+        <div
+          class="w3-container w3-padding-small w3-dark-grey w3-center"
+          style="width:100%"
+        >
+          100%
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">90+</span><br />
+        Quests
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">120+</span><br />
+        shrines to discover
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">900+</span><br />
+        Korok seeds to find
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">20+</span><br />
+        Incredible cutscenes
+      </div>
+    </div>
+
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">IN GAME SCENES</span>
+      </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+      <h3 class="w3-center">CUTSCENES AND IMAGES</h3>
+      <p class="w3-center">
+        <em
+          ><br />
+          Click on the images to make them bigger</em
+        >
+      </p>
+      <br />
+
+      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+      <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img
+            src="https://imgix.bustle.com/mic/gc2ltfjjvs37xmk3bbdnhtnxwveieo9a9rermo1x2mmhghhum6cmmflj8cfrxesc.jpg?w=1020&h=576&fit=crop&crop=faces&auto=format%2Ccompress"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="Fighting Enemies"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="https://f-origin.hypotheses.org/wp-content/blogs.dir/2279/files/2019/10/do-you-remember-me.gif"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="Zelda"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="https://68.media.tumblr.com/4257707ccf8939abc0506b6a40e9eaf5/tumblr_ojr414CF2C1r0hpzko1_500.gif"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="War cutscene"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="https://i.makeagif.com/media/6-07-2017/PeIkas.gif"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="Calamity Ganon"
+          />
+        </div>
+      </div>
+
+      <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img
+            src="https://i.pinimg.com/originals/43/4f/20/434f200beabbdb83d59b6d4fb682d99e.gif"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="Aim"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="https://i.pinimg.com/originals/3c/32/dd/3c32dd331bba759c45876faa9e841848.gif"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="Sword practice"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="https://i.pinimg.com/originals/c9/d4/04/c9d40400d48d40345a5d8276ff87c98b.gif"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="Prince Sidon"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="https://i.pinimg.com/originals/79/61/45/796145fa54328b5e4ce8948ccf4f0174.gif"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="Passing Dragon"
+          />
+        </div>
+        <button
+          class="w3-button w3-padding-large w3-light-grey"
+          style="margin-top:64px"
+        >
+          LOAD MORE
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div
+      id="modal01"
+      class="w3-modal w3-black"
+      onclick="this.style.display='none'"
+    >
+      <span
+        class="w3-button w3-large w3-black w3-display-topright"
+        title="Close Modal Image"
+        ><i class="fa fa-remove"></i
+      ></span>
+      <div
+        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+      >
+        <img id="img01" class="w3-image" />
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+    <!-- Third Parallax Image -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-black w3-wide">REVIEWS</span>
+      </div>
+    </div>
+
+    <!--Reviews -->
+  
+<br/>
+    <img
+      src="http://www.eteknix.com/wp-content/uploads/2017/03/breath-of-the-wild-reviews-800x580.jpg"
+      class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+      alt="Reviews"
+      style="width:100%"
+    />
+  
+      <img
+      src="https://i.redd.it/1vcushsnx0jy.png"
+      class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+      alt="Reviews"
+      style="width:100%"
+    />
+  
+  <br/>
+
+    <!-- Forth Parallax Image -->
+    <div class="bgimg-4 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+      </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+      <h3 class="w3-center">What do you love about The legend of zelda?</h3>
+      <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+      <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m4 w3-container">
+          <img
+            src="https://imgix.bustle.com/uploads/image/2020/9/9/6b71f122-b21e-41e9-b77a-97f7f50c9fb0-picture_of_the_champions_breath_of_the_wild.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg"
+            class="w3-image w3-round"
+            style="width:100%"
+          />
+        </div>
+        <div class="w3-col m8 w3-panel">
+          <div class="w3-large w3-margin-bottom"></div>
+          <p>
+            Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a
+            note:
+          </p>
+          <form action="/action_page.php" target="_blank">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input
+                  class="w3-input w3-border"
+                  type="text"
+                  placeholder="Name"
+                  required
+                  name="Name"
+                />
+              </div>
+              <div class="w3-half">
+                <input
+                  class="w3-input w3-border"
+                  type="text"
+                  placeholder="Email"
+                  required
+                  name="Email"
+                />
+              </div>
+            </div>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              placeholder="Message"
+              required
+              name="Message"
+            />
+            <button
+              class="w3-button w3-black w3-right w3-section"
+              type="submit"
+            >
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off"
+    >
+      <a href="#home" class="w3-button w3-light-grey"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a
+      >
+      <div class="w3-xlarge w3-section">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </div>
+    </footer>
+
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction();
+      };
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          navbar.className =
+            "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(
+            " w3-card w3-animate-top w3-white",
+            ""
+          );
+        }
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>
